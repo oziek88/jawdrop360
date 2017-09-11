@@ -34,6 +34,10 @@ body{
     height: 102%;
     overflow: scroll;
     border-right: 4px solid #84b2df;
+    background: url("/static/images/house_backdrop.jpg") 100% fixed;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	background-size: cover;
 }
 
 #rightPage{
@@ -42,12 +46,14 @@ body{
     height: 102%;
     overflow: scroll;
     border-left: 4px solid #40928f ;
-    
+    background: url("/static/images/wedding_backdrop.jpg") 100% no-repeat fixed;
+	background-size: cover;
+	background-position: 300px 0px;
 }
 
 #headerBOX{
 	float:left;
-	display:none;
+	/*display:none;*/
 	position:absolute;
 	overflow:hidden;
 	padding:20px;
@@ -65,10 +71,10 @@ body{
 }
 #thik_Houses{
 	margin-top:250px;
-	background: url("/static/images/house_backdrop.jpg") 100% fixed;
+	/*background: url("/static/images/house_backdrop.jpg") 100% fixed;
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
-	background-size: cover;
+	background-size: cover;*/
 	border-top: 4px solid #40928f ;
 	padding-bottom:10px;
 }
@@ -99,9 +105,9 @@ body{
 }
 
 #thik_Weddings{
-	background: url("/static/images/wedding_backdrop.jpg") 100% no-repeat fixed;
+	/*background: url("/static/images/wedding_backdrop.jpg") 100% no-repeat fixed;
 	background-size: cover;
-	background-position: 300px 0px;
+	background-position: 300px 0px;*/
 	padding-top:10px;
 	padding-bottom:10px;
 }
