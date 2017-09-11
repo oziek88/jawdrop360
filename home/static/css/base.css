@@ -60,7 +60,6 @@ body{
 	height:250px;
 	width:calc(50% - 4px);
 	color:#e6f6ff;
-	/*background-color:#40928f;*/
 	background: #40928f; /* For browsers that do not support gradients */
 	background: -webkit-linear-gradient(left top, #b3cccc, #40928f ); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(bottom right, #b3cccc, #40928f); /* For Opera 11.1 to 12.0 */
