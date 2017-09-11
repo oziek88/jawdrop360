@@ -1,0 +1,129 @@
+/*---------- base ----------*/
+
+@keyframes animatedBackground {
+	0% {
+    background-position: 0% 0%;
+  }
+  
+   50% {
+    background-position: 100% 0%;
+  }
+  
+  100% {
+    background-position: 0 0;
+  }
+}
+
+html {
+    height:100%;
+    padding:0px;
+}
+body{
+   height:100%;
+   background-color:#40928f;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+#leftPage{
+	float: left;
+    width: 50%;
+    height: 102%;
+    overflow: scroll;
+    border-right: 4px solid #84b2df;
+}
+
+#rightPage{
+	float: left;
+    width: 50%;
+    height: 102%;
+    overflow: scroll;
+    border-left: 4px solid #40928f ;
+    
+}
+
+#headerBOX{
+	float:left;
+	display:none;
+	position:absolute;
+	overflow:hidden;
+	padding:20px;
+	height:250px;
+	width:calc(50% - 4px);
+	color:#e6f6ff;
+	background-color:#40928f;
+	z-index:5 !important;
+	border-bottom: 4px solid #84b2df;
+}
+#thik_Houses{
+	margin-top:250px;
+	background: url("/static/images/house_backdrop.jpg") 100% fixed;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	background-size: cover;
+	border-top: 4px solid #40928f ;
+	padding-bottom:10px;
+}
+
+#thin_Houses{
+	height:100%;
+	width:90%;
+	padding:1px  3% 2% 3%;
+	margin:5%;
+	background-color: rgba(255,255,255,0.9);
+	color:#84b2df;
+	border-radius:10px;
+}
+
+#thin_Houses h1,h3{
+	text-shadow: 2px 1px rgba(150,150,150,0.5);
+}
+
+#thin_Houses h5{
+	text-align:center;
+	text-shadow: 1px 1px rgba(150,150,150,0.4);
+}
+
+#thin_Houses p{
+	font-size:16px;
+	text-indent: 20px;
+	text-shadow: 1px 1px rgba(150,150,150,0.3);
+}
+
+#thik_Weddings{
+	background: url("/static/images/wedding_backdrop.jpg") 100% no-repeat fixed;
+	background-size: cover;
+	background-position: 300px 0px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#thin_Weddings{
+	height:100%;
+	width:90%;
+	padding:1px  3% 2% 3%;
+	margin:5%;
+
+	background-color: rgba(255,255,255,0.9);
+	color:#40928f;
+	border-radius:10px;
+}
+
+#thin_Weddings h1{
+text-shadow: 2px 1px #aaa;
+}
+
+.petals{
+	background: url("/static/images/petals_backdrop.png") 100% no-repeat fixed;
+	animation: animatedBackground 30s linear infinite;
+	z-index: 5;
+}
+
+#intro_bimoji{
+	height:auto;
+	width:120px;
+}
+
