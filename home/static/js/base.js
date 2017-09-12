@@ -1,20 +1,72 @@
 $(document).ready(function () {
 
-    $('#headerBOX').show("fade", 1000);
+	if (window.innerWidth < 850) {
+		$("#headerBOX").css("width", "100%" );
+	    $("#rightPage").css({"background-position": "0px 0px", "width": "100%", "border-left": "0px"});
+	    $("#leftPage").css("width", "100%" );
+	    $("#jawdropList").css("padding-top", "0px" );
+	    $('#link2wedding').show();
+	}
+
+	$('#link2homeDemo').click(function() {
+   		$('#leftPage').animate({
+        	scrollTop: $("#homeDemo").offset().top -260
+    	}, 2000);
+	});
+
+	$('#link2homeProcess').click(function() {
+   		$('#leftPage').animate({
+        	scrollTop: $("#homeProcess").offset().top -260
+    	}, 2000);
+	});
+
+	$('#link2homeContact').click(function() {
+   		$('#leftPage').animate({
+        	scrollTop: $("#homeContact").offset().top -260
+    	}, 2000);
+	});
+
+	$('#link2Contact').click(function() {
+   		$('#leftPage').animate({
+        	scrollTop: $("#homeContact").offset().top 
+    	}, 2000);
+	});
+
+	$('#link2wedding').click(function() {
+   		$('html, body').animate({
+        	scrollTop: $("#rightPage").offset().top
+    	}, 2000);
+	});
 
 });
+
+window.onresize = function() {
+	if (window.innerWidth < 850) {
+		$("#headerBOX").css("width", "100%" );
+	    $("#rightPage").css({"background-position": "0px 0px", "width": "100%", "border-left": "0px"});
+	    $("#leftPage").css("width", "100%" );
+	    $("#jawdropList").css("padding-top", "0px" );
+	    $('#link2wedding').show("fade", 200); 
+	} else {
+		$("#headerBOX").css("width", "calc(50% - 4px)" );
+	    $("#rightPage").css({"background-position": "350px 0px", "width": "50%", "border-left": "4px"});
+	    $("#leftPage").css("width", "50%" );
+	    $("#jawdropList").css("padding-top", "5px" );
+	    $('#link2wedding').hide("fade", 200);
+	}
+};
 
 ///////////////////////////////
 
 // random bitmoji pic in intro //
-window.onload = chooseBitmoji;
+// window.onload = chooseBitmoji;
 
-var myPix = new Array("static/images/bitmoji/1.png","static/images/bitmoji/2.png","static/images/bitmoji/3.png","static/images/bitmoji/4.png","static/images/bitmoji/5.png","static/images/bitmoji/6.png","static/images/bitmoji/7.png","static/images/bitmoji/8.png","static/images/bitmoji/9.png","static/images/bitmoji/10.png","static/images/bitmoji/11.png","static/images/bitmoji/12.png",);
+// var myPix = new Array("static/images/bitmoji/1.png","static/images/bitmoji/2.png","static/images/bitmoji/3.png","static/images/bitmoji/4.png","static/images/bitmoji/5.png","static/images/bitmoji/6.png","static/images/bitmoji/7.png","static/images/bitmoji/8.png","static/images/bitmoji/9.png","static/images/bitmoji/10.png","static/images/bitmoji/11.png","static/images/bitmoji/12.png",);
 
-function chooseBitmoji() {
-     var randomNum = Math.floor(Math.random() * myPix.length);
-     document.getElementById("intro_bitmoji").src = myPix[randomNum];
-}
+// function chooseBitmoji() {
+//      var randomNum = Math.floor(Math.random() * myPix.length);
+//      document.getElementById("intro_bitmoji").src = myPix[randomNum];
+// }
 
 
 /////////////////////////

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block leaflet_requirements %}
 	{% load leaflet_tags %}
@@ -11,17 +12,33 @@
 {% endblock %}
 
 {% block headerBOX %}
-<div class="container">
-  <div class="row">
-    
-    <!-- <div class=" col-xs-4 text-center">
-      <h3>Check me out!</h3>
-      <img src="{% static 'images/bitmoji/1.png' %}" id="intro_bitmoji" style="height:auto;width:140px" alt="My image"/>
-    </div> -->
-   
-     
+
+<div class="row">
+  <div id="jawdropTitle" class="col-xs-6 col-md-7 ">
+    <h1>JawDrop</h1>
+    <h4><i>360 Videography</i></h4>
+  </div>
+  <div id="jawdropList" class="col-xs-6 col-md-5">
+    <ul style="list-style: none;">
+      <li>
+        <h5>(540) 842-5123</h5>
+      </li>
+      <li>
+        <h5>jawdrop360@gmail.com</h5>
+      </li>
+      <li>
+        <h5 id="link2Contact" style="cursor:pointer;">Schedule Appointment</h5>
+      </li>
+      <li>
+        <h5 id="link2wedding">Wedding Info</h5>
+      </li>
+    </ul>
   </div>
 </div>
+<div class="row">
+  
+</div>
+
 {% endblock %}
 
 {% block thik_Houses %}
@@ -31,13 +48,13 @@
 
 <div class="row">
   <div class="col-xs-4">
-    <h5>Demo</h5>
+    <h5 id="link2homeDemo">Demo</h5>
   </div>
   <div class="col-xs-4">
-    <h5>Process</h5>
+    <h5 id="link2homeProcess">Process</h5>
   </div>
   <div class="col-xs-4">
-    <h5>Contact</h5>
+    <h5 id="link2homeContact">Contact</h5>
   </div>
 </div>
 
@@ -47,12 +64,31 @@
 
 <br>
 
-<iframe width="100%" height="415" src="https://www.youtube.com/embed/RVmjl6G4L1w" frameborder="0" allowfullscreen></iframe>
+<iframe id="homeDemo" width="100%" height="415" src="https://www.youtube.com/embed/RVmjl6G4L1w" frameborder="0" allowfullscreen></iframe>
 
-<h3>Our Process</h3>
+<h3 id="homeProcess">Our Process</h3>
 <p>Once a scheduled date and rate have been determined, all gear will be charged and ready for up to 4 hours of footage.  The VR camera is made up of 8 lenses that all shoot 3D with 4K resolution. In addition, a MOZA Guru Gimbal is used for 100% camera stabilization. This prevents viewers from feeling nausia while enjoying their immersive house touring experience.</p>
 <p>Upon arrival, we will prep the house for shooting. This includes making sure the lights are all on, opening all doors, and making the house as spacious as possible. While filming, the realtor can choose to be in the shot giving a guided tour through the house, or sit out so that the video resembles the demo above.  Once the videography of the home is complete, the footage will be stitched, edited, rendered, and placed on YouTube. The video on YouTube will NOT be public, it will be associated with a sharable link so that only those with the link can view the video. The link will be sent to the realtor so that it can be easily embeded into their website.</p>
 
+
+<div class='row'>
+<div class='col-lg-8 col-sm-10 col-xs-12'>
+<h1 id="homeContact">{{ title }}</h1>
+
+{% if confirm_message %}
+<p>{{ confirm_message }}</p>
+{% endif %}
+
+{% if form %}
+<form method='POST' action=''> {% csrf_token %}
+{{ form|crispy }}
+<br>
+<input type="submit" value="submit form" class="btn btn-default"/>
+</form>
+{% endif %}
+</div>
+</div>
+<br>
 
 </div>
 
@@ -68,7 +104,7 @@
 <br>
 
 <h3>Coming Soon!</h3>
-
+<br>
   <!-- <div id='mapBuffer' >
     {% leaflet_map "sidemap" callback="window.map_init_basic" %}
   </div> -->
