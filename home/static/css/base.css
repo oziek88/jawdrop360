@@ -73,7 +73,7 @@ body{
 }
 
 #jawdropTitle{
-	padding-top:15px;
+	padding-top:5px;
 	text-align:center;
 }
 #jawdropTitle h1{
@@ -95,6 +95,17 @@ body{
 
 #jawdropList li{
 	padding-top:15px;
+}
+
+#jawdropList a, a:link, a:visited {
+    color: rgba(164, 221, 219, 0.3);
+    text-shadow: 0px 1px 3px #40928f, 0 0 0 #000, 0px 1px 3px #40928f;
+    text-decoration: none;
+}
+
+#jawdropList a:hover,  a:active {
+    color: rgba(164, 221, 219, 0.1);
+    text-shadow: 1px 3px 5px #40928f, 0 0 0 #000, 1px 3px 5px #40928f;
 }
 
 #link2wedding{
