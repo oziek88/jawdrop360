@@ -14,9 +14,9 @@ def home(request):
     	name = form.cleaned_data['name']
     	comment = form.cleaned_data['comment']
     	topic = form.cleaned_data['topic']
-    	subject = 'JAWDROP360 BOX MESSAGE'
-    	message = 'From: %s \n %s \n Hey my name is %s,  %s' %(email, topic, name, comment)
     	emailFrom = form.cleaned_data['email']
+    	subject = 'JAWDROP360 BOX MESSAGE'
+    	message = 'From: %s \n %s \n Hey my name is %s,  %s' %(emailFrom, topic, name, comment)
     	emailTo = [settings.EMAIL_HOST_USER]
     	send_mail(subject, message, emailFrom, emailTo, fail_silently=False)
     	title = "Thanks!"
