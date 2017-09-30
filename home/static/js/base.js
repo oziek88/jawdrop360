@@ -1,35 +1,35 @@
 $(document).ready(function () {
 
-	if (window.innerWidth < 1020) {
+	if (window.innerWidth < 880) {
 		$("#headerBOX").css("width", "100%" );
 	    $("#rightPage").css({"background-position": "0px 0px", "width": "100%", "border-left": "0px"});
 	    $("#leftPage").css("width", "100%" );
-	    $("#jawdropTitle h1").css("font-size", "12vw" );
-	    $("#jawdropList").css("padding-top", "0px" );
+	    // $("#jawdropTitle h1").css("font-size", "10vw" );
+	    $("#jawdropList").css("margin-top", "10px" );
 	    $('#link2wedding').show();
 	}
 
 	$('#link2homeDemo').click(function() {
    		$('#leftPage').animate({
-        	scrollTop: $("#homeDemo").offset().top -260
+        	scrollTop: $("#homeDemo").offset().top -160
     	}, 2000);
 	});
 
 	$('#link2homeProcess').click(function() {
    		$('#leftPage').animate({
-        	scrollTop: $("#homeProcess").offset().top -260
+        	scrollTop: $("#homeProcess").offset().top -160
     	}, 2000);
 	});
 
 	$('#link2homeContact').click(function() {
    		$('#leftPage').animate({
-        	scrollTop: $("#homeContact").offset().top -260
+        	scrollTop: $("#homeContact").offset().top -160
     	}, 2000);
 	});
 
 	$('#link2Contact').click(function() {
    		$('#leftPage').animate({
-        	scrollTop: $("#homeContact").offset().top 
+        	scrollTop: $("#homeContact").offset().top -160
     	}, 2000);
 	});
 
@@ -42,19 +42,19 @@ $(document).ready(function () {
 });
 
 window.onresize = function() {
-	if (window.innerWidth < 1020) {
+	if (window.innerWidth < 880) {
 		$("#headerBOX").css("width", "100%" );
 	    $("#rightPage").css({"background-position": "0px 0px", "width": "100%", "border-left": "0px"});
 	    $("#leftPage").css("width", "100%" );
-	    $("#jawdropTitle h1").css("font-size", "10vw" );
-	    $("#jawdropList").css("padding-top", "0px" );
+	    // $("#jawdropTitle h1").css("font-size", "10vw" );
+	    $("#jawdropList").css("margin-top", "10px" );
 	    $('#link2wedding').show("fade", 200); 
 	} else {
 		$("#headerBOX").css("width", "calc(50% - 4px)" );
 	    $("#rightPage").css({"background-position": "350px 0px", "width": "50%", "border-left": "4px"});
 	    $("#leftPage").css("width", "50%" );
-	    $("#jawdropTitle h1").css("font-size", "6vw" );
-	    $("#jawdropList").css("padding-top", "5px" );
+	    $("#jawdropTitle h1").css("font-size", "50px" );
+	    $("#jawdropList").css("margin-top", "20px" );
 	    $('#link2wedding').hide("fade", 200);
 	}
 };

@@ -59,8 +59,7 @@ body{
 	/*display:none;*/
 	position:absolute;
 	overflow:hidden;
-	padding:20px;
-	height:250px;
+	height:150px;
 	width:calc(50% - 4px);
 	/*color:#e6f6ff;*/
 	background: #40928f; /* For browsers that do not support gradients */
@@ -73,28 +72,30 @@ body{
 }
 
 #jawdropTitle{
-	padding-top:5px;
+	padding-left:30px;
+	padding-top:0px;
 	text-align:center;
 }
 #jawdropTitle h1{
-	font-size:6vmax;
+	font-size:50px;
     color: rgba(164, 221, 219, 1);
     text-shadow: 1px 4px 6px #40928f, 0 0 0 #000, 1px 4px 6px #40928f;
 }
 #jawdropTitle h4{
-	font-size:2vmax;
+	font-size:20px;
     color: rgba(164, 221, 219, 0.3);
     text-shadow: 0px 1px 3px #40928f, 0 0 0 #000, 0px 1px 3px #40928f;
 }
 #jawdropList{
-	padding-top:5px;
-	font-size:2vmax;
+	margin-top:20px;
+	
     color: rgba(164, 221, 219, 0.3);
     text-shadow: 0px 1px 3px #40928f, 0 0 0 #000, 0px 1px 3px #40928f;
 }
 
 #jawdropList li{
-	padding-top:15px;
+	padding:0px;
+	margin-top:14px;
 }
 
 #jawdropList a, a:link, a:visited {
@@ -113,13 +114,13 @@ body{
 	cursor:pointer;
 }
 #thik_Houses{
-	margin-top:250px;
+	margin-top:150px;
 	/*background: url("/static/images/house_backdrop.jpg") 100% fixed;
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 	background-size: cover;*/
 	border-top: 4px solid #40928f ;
-	padding-bottom:10px;
+	padding-bottom:0px;
 }
 
 #thin_Houses{
@@ -132,7 +133,7 @@ body{
 	border-radius:10px;
 }
 
-#thin_Houses h1,h3{
+#thin_Houses h3{
 	text-shadow: 2px 1px rgba(150,150,150,0.5);
 }
 
@@ -167,7 +168,7 @@ body{
 	border-radius:10px;
 }
 
-#thin_Weddings h1{
+#thin_Weddings h2{
 text-shadow: 2px 1px #aaa;
 }
 
